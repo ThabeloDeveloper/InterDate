@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="1dp"
+    style="@style/CardView.Light."
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/layoutMain"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            style="@style/CardView.Light."
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardCornerRadius="500dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/imageProfile"
+                        android:scaleType="center"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/test_image"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Thabelo Nevhuduli"
+                        android:textStyle="bold"
+                        android:id="@+id/names"
+                        android:maxLines="1"
+                        android:ellipsize="marquee"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Male"
+                            android:id="@+id/gender"
+                            style="@style/Base.Widget.AppCompat.TextView"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="|"
+                            style="@style/Base.Widget.AppCompat.TextView"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="18"
+                            android:id="@+id/age"
+                            style="@style/Base.Widget.AppCompat.TextView"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="South Africa"
+                            android:textSize="11sp"
+                            android:maxLines="1"
+                            android:ellipsize="marquee"
+                            android:layout_marginEnd="50dp"
+                            android:id="@+id/location"
+                            style="@style/Base.Widget.AppCompat.TextView"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:text="@string/confirm"
+                            android:textAllCaps="false"
+                            app:cornerRadius="20dp"
+                            android:id="@+id/confirmRequest"
+                            android:textColor="@color/white"
+                            style="@style/MaterialBtnConfirm"
+                            android:layout_height="40dp"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:text="Delete"
+                            style="@style/MaterialBtnDelete"
+                            app:cornerRadius="20dp"
+                            android:id="@+id/deleteRequest"
+                            android:layout_marginStart="10dp"
+                            android:textAllCaps="false"
+                            android:layout_height="40dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/shima"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardView.Light."
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_gravity="center_vertical"
+                        app:cardCornerRadius="500dp"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:foreground="@color/Gray"
+                            android:layout_height="match_parent"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Thabelo Nevhuduli"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/Gray"
+                            android:background="@color/Gray"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="100dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/Gray"
+                            android:gravity="center_vertical"
+                            android:layout_height="14dp"/>
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="150dp"
+                            android:background="@color/Gray"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="South Africa"
+                                android:textSize="11sp"
+                                android:textColor="@color/Gray"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

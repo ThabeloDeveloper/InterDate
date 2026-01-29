@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    style="@style/Theme.AppCompat.SplashScreen"
+    android:layout_height="match_parent"
+    tools:context=".Kotlin.SplashScreenKotlin">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="50dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/application_icon"
+            android:src="@drawable/new_icon"
+            style="@style/Base.Widget.AppCompat.ImageView"
+            />
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageBottom"
+        android:progressTintMode="screen"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        style="@style/Base.Widget.AppCompat.ImageView"
+        android:layout_marginBottom="20dp"/>
+
+
+
+
+</RelativeLayout>

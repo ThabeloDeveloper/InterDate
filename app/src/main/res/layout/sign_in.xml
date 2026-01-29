@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="0dp"
+    style="@style/CardView.Edit"
+    android:backgroundTint="@color/PagerBack"
+    tools:context=".Authentication.SignIn">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/gothamroundedmedium"
+                android:text="@string/common_signin_button_text"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/email"
+                android:isCredential="true"
+                app:startIconDrawable="@drawable/email"
+                app:startIconTint="@color/darkGreen"
+                app:boxStrokeColor="@color/darkGreen"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/darkGreen"
+                android:textColorHint="@color/darkGreen"
+                android:layout_marginHorizontal="30dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:id="@+id/email"
+                    android:textColor="@color/white"
+                    android:autofillHints="emailAddress"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/prompt_password"
+                app:hintTextColor="@color/darkGreen"
+                android:textColorHint="@color/darkGreen"
+                android:layout_marginTop="30dp"
+                app:hintAnimationEnabled="true"
+                app:boxStrokeColor="@color/darkGreen"
+                android:isCredential="true"
+                app:startIconDrawable="@drawable/lock"
+                app:startIconTint="@color/darkGreen"
+                app:passwordToggleTint="@color/darkGreen"
+                app:passwordToggleEnabled="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:id="@+id/password"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forget_password"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:contextClickable="true"
+                    android:textColor="@color/darkGreen"
+                    android:id="@+id/reset_Password"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/reset"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:id="@+id/signIn"
+                android:backgroundTint="@color/darkGreen"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/common_signin_button_text"/>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/or"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkGreen"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:id="@+id/createAccount"
+                android:text="@string/create_an_account"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.cardview.widget.CardView>

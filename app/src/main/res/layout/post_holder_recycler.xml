@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_marginStart="10dp"
+    app:cardCornerRadius="10dp"
+    style="@style/CardView.Light.ImageHolder"
+    android:layout_height="200dp">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:contentDescription="@string/post"
+            android:id="@+id/image"
+            android:scaleType="center"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:backgroundTint="@android:color/transparent"
+            android:padding="3dp"
+            android:id="@+id/deleteImage"
+            android:src="@drawable/delete"
+            app:tint="@color/white"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:backgroundTint="@android:color/transparent"
+            android:padding="3dp"
+            android:id="@+id/makeProfile"
+            android:src="@drawable/make_profile"
+            app:tint="@color/white"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

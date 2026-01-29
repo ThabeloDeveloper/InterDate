@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    style="@style/BottomSheetEditLinearLayout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/Add_more_Credits"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Msg"
+        android:text="@string/choose_your_preferred_method_to_top_up_your_credits"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/watch_ads"
+            android:id="@+id/yes"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase"
+            android:enabled="true"
+            android:clickable="false"
+            android:id="@+id/Purchase"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/msg"
+        android:title="@string/messageee"
+        app:showAsAction="always"
+        android:icon="@drawable/speecha"
+        android:iconTint="@color/LightGreen"
+
+        />
+    <item
+        android:id="@+id/more_options"
+        android:icon="@drawable/more_vert_green"
+        app:showAsAction="ifRoom"
+        android:title="@string/more_optionss"
+        android:iconTint="@color/LightGreen">
+        <menu
+            >
+            <item
+                android:title="@string/profileeee"
+                android:id="@+id/profile"/>
+            <item
+                android:title="@string/remove"
+                android:id="@+id/remove_"/>
+
+        </menu>
+    </item>
+</menu>

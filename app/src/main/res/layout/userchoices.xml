@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_authentication_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/gothamroundedmedium"
+        android:text="@string/specify_gender"
+        android:textColor="@color/white"
+        android:id="@+id/specify"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="@string/gender"
+        android:id="@+id/ChoiceHint"
+        app:startIconDrawable="@drawable/person_create"
+        app:startIconTint="@color/darkGreen"
+        app:boxStrokeColor="@color/darkGreen"
+        app:hintTextColor="@color/darkGreen"
+        android:textColorHint="@color/darkGreen"
+        app:hintAnimationEnabled="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:id="@+id/choice"
+            android:textColor="@color/white"
+            android:autofillHints="name"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"
+        android:layout_marginVertical="30dp"
+        android:backgroundTint="@color/LightGreen"
+        android:layout_marginTop="10dp"
+        android:text="@string/submit"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

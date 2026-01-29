@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/more_vert_green"
+        app:showAsAction="always"
+        android:title="@string/race">
+        <menu>
+            <item
+                android:title="@string/any"
+                android:id="@+id/any"/>
+            <item
+                android:title="@string/black"
+                android:id="@+id/black"/>
+            <item
+                android:title="@string/coloured"
+                android:id="@+id/coloured"/>
+            <item
+                android:title="@string/indian"
+                android:id="@+id/indian"/>
+            <item
+                android:title="@string/white"
+                android:id="@+id/white"/>
+            <item
+                android:title="@string/Other"
+                android:id="@+id/others"/>
+        </menu>
+    </item>
+
+
+</menu>

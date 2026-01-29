@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/darkGreen"
+    android:layout_height="200dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="1dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/PagerBack"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="100dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="10dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="10dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="10dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="10dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/DarkTop"
+                android:layout_height="10dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

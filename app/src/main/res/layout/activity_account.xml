@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:title="Settings"
+            android:id="@+id/tooBar"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/arrow_back"
+            style="@style/Theme.InterDate.Toolbar"
+            android:layout_height="?android:actionBarSize">
+            
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="0dp"
+        style="@style/Theme.InterDate.TabLayout"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="500dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:contentDescription="@string/profile_image"
+                    android:scaleType="center"
+                    android:id="@+id/profile_Image"
+                    android:layout_height="70dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:maxWidth="155dp"
+                    android:ellipsize="marquee"
+                    android:id="@+id/username"
+                    android:textStyle="bold"
+                    android:text="@string/thabelo_nevhuduli"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:maxWidth="150dp"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/about"
+                    android:ellipsize="marquee"
+                    android:textStyle="normal"
+                    android:text="@string/hey_there_am_using_interdate"
+                    />
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content">
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/update_public"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1.2dp"
+                    android:layout_width="48dp"
+                    android:padding="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cardCornerRadius="10dp"
+                    style="@style/CardView.Edit"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:scaleType="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/personal_information_editor"
+                        android:src="@drawable/edit" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        style="@style/CardView.Edit"
+        app:cardCornerRadius="0dp"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/PagerBack"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    app:strokeWidth="0dp"
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/changes_mails"
+                    app:cardCornerRadius="0dp"
+                    android:layout_height="?android:actionBarSize">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:contentDescription="@string/account"
+                            android:src="@drawable/account"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="48dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/account"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:maxLines="1"
+                                android:ellipsize="marquee"
+                                android:text="@string/change_email_change_password_delete_account"
+                                android:textStyle="normal"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    app:strokeWidth="0dp"
+                    android:id="@+id/card_privacy"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    android:layout_height="?android:actionBarSize">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:contentDescription="@string/privacy"
+                            android:src="@drawable/lock"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="48dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/privacy"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:maxLines="1"
+                                android:ellipsize="marquee"
+                                android:text="@string/blocklist_disappearing_messages"
+                                android:textStyle="normal"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/language"
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    app:strokeWidth="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    android:layout_height="?android:actionBarSize">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:contentDescription="@string/app_languages"
+                            android:src="@drawable/language"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="48dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/app_language"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/currentLanguage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:ellipsize="marquee"
+                                android:maxLines="1"
+                                android:text="@string/english_default"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    app:strokeWidth="0dp"
+                    android:id="@+id/helper"
+                    app:cardCornerRadius="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="?android:actionBarSize">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:contentDescription="@string/help"
+                            android:src="@drawable/help"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="48dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/help"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:maxLines="1"
+                                android:ellipsize="marquee"
+                                android:text="@string/help_center_contact_us_privacy_policy"
+                                android:textStyle="normal"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    android:clickable="true"
+                    app:strokeWidth="0dp"
+                    android:focusable="true"
+                    android:id="@+id/card_theme"
+                    app:cardCornerRadius="0dp"
+                    android:layout_height="?android:actionBarSize">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:contentDescription="@string/theme"
+                            android:src="@drawable/brightness"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="48dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/app_theme"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:maxLines="1"
+                                android:ellipsize="marquee"
+                                android:text="@string/mode_dark_light"
+                                android:textStyle="normal"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    style="@style/CardView.Edit"
+                    app:strokeWidth="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/purchase"
+                    app:cardCornerRadius="0dp"
+                    android:layout_height="?android:actionBarSize">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="49dp"
+                            android:contentDescription="@string/purchases"
+                            android:src="@drawable/shop"
+                            style="@style/Base.Widget.AppCompat.ImageView.Account."
+                            android:layout_height="49dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/purchase_subscriptions"
+                                style="@style/Base.Widget.AppCompat.TextView"
+                                android:textStyle="normal"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:maxLines="1"
+                                android:ellipsize="marquee"
+                                android:text="@string/minor_advanced_professional"
+                                android:textStyle="normal"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

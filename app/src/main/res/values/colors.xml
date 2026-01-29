@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    ///////////LightMode///////////////
+
+    <color name="LightGreen">#008069</color>
+    <color name="LightTapText">#7CBEB2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="sentLight">#E7FFDB</color>
+    <color name="receivedLight">#FFFFFF</color>
+    <color name="sentBackDark">#00A884</color>
+    <color name="red">#66BC0101</color>
+    <color name="receivedDark">#1F2C34</color>
+    <color name="messagingBackLight">#D1C6BA</color>
+
+
+    <color name="Gray">#C5C5C5</color>
+
+
+    /////////DarkThemColor//////////
+    <color name="darkGreen">#00A884</color>
+    <color name="DarkTop">#1F2C34</color>
+    <color name="darkTapText">#49565E</color>
+    <color name="PagerBack">#121B22</color>
+    <color name="blue">#3F51B5</color>
+
+
+</resources>

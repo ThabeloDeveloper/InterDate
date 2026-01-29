@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/BottomSheetEditLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="20dp">
+    <androidx.cardview.widget.CardView
+        style="@style/CardView.BShit"
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/own_it"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Msg"
+        android:layout_marginBottom="10dp"
+        android:text="@string/add_more_credits_and_start_owning_interdate_interact_with_any_person_of_your_choosing"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subscribe"
+            android:enabled="false"
+            android:clickable="false"
+            android:id="@+id/subscribe"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase"
+            android:id="@+id/Purchase"
+            android:enabled="true"
+            android:clickable="false"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

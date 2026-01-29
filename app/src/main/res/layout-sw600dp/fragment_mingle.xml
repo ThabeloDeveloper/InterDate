@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Mingle">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/width"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mingleShimma"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Recycler_Shima_Tab"/>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/mingleGridTab"
+        android:numColumns="3"
+        android:horizontalSpacing="5dp"
+        android:gravity="center_horizontal"
+        android:verticalSpacing="5dp"
+        android:paddingTop="5dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/searchStatus"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_width="17dp"
+            android:progressTint="@color/LightGreen"
+            android:layout_marginTop="1dp"
+            android:indeterminateTint="@color/LightGreen"
+            android:layout_height="17dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searching"
+            style="@style/Base.Widget.AppCompat.ImageView"
+            android:textSize="17sp"
+            android:id="@+id/searchFocus"
+            android:textStyle="bold"
+            android:textColor="@color/LightGreen"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/noDataInLocation"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_height="100dp"
+            android:id="@+id/errorImage"
+            app:tint="@color/LightGreen"
+            android:src="@drawable/location_off"
+            android:layout_width="100dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/errorMsg"
+            android:text="@string/no_users_found_at_your_location"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

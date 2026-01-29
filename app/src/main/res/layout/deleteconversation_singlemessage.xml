@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    style="@style/BottomSheetEditLinearLayout"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gothamroundedmedium"
+        android:textColor="@color/darkGreen"
+        android:textSize="16sp"
+        android:text="@string/delete_conversation"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/BottomSheetEditLinearLayout"
+        android:layout_width="match_parent"
+        android:text="@string/delete_for_everyone"
+        android:gravity="end|center_vertical"
+        android:paddingRight="15dp"
+        android:textStyle="bold"
+        android:textSize="16.5sp"
+        android:id="@+id/delete_for_everyone"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/BottomSheetEditLinearLayout"
+        android:layout_width="match_parent"
+        android:text="@string/delete_for_me"
+        android:textStyle="bold"
+        android:gravity="end|center_vertical"
+        android:paddingRight="15dp"
+        android:id="@+id/delete_for_me"
+        android:textSize="16.5sp"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/BottomSheetEditLinearLayout"
+        android:layout_width="match_parent"
+        android:text="@string/cancel"
+        android:id="@+id/cancel"
+        android:textStyle="bold"
+        android:textSize="16.5sp"
+        android:gravity="end|center_vertical"
+        android:paddingRight="15dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

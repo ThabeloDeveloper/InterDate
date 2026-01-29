@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_sheet_authentication_back"
+    style="@style/BottomSheetEditLinearLayout"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/DarkTop"
+            app:cardCornerRadius="10dp" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dismiss"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/PagerBack"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            app:cardCornerRadius="5dp"
+            app:strokeColor="@color/DarkTop">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/done"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:tint="@color/darkGreen" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="5dp"
+        android:text="@string/languages"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                app:dividerColor="@color/white"
+                android:alpha="0.7"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/currentLanguage"
+                android:text="English(Current Language)"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                app:dividerColor="@color/white"
+                android:alpha="0.7"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/afrikaans"
+                android:textColor="@color/white"
+                android:text="@string/afrikaans"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/chinese_simplified"
+                android:layout_marginTop="5dp"
+                android:enabled="false"
+                android:textColor="@color/white"
+                android:text="@string/chinese_simplified"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/chinese_traditional"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:enabled="false"
+                android:text="@string/chinese_traditional"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/czech"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:text="@string/czech"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/english"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/english"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/franch"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:enabled="false"
+                android:text="@string/french"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/german"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/german"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/italian"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:text="@string/italian"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/japanese"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:text="@string/japanese"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/korean"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/korean"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/polish"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:text="@string/polish"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/portuguese"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:text="@string/portuguese"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/russian"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/russian"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/spanish"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/spanish"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/turkish"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/turkish"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

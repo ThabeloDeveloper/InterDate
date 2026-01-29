@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    style="@style/BottomSheetEditLinearLayout"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_margin="5dp"
+        style="@style/CardView.Type"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/choose_call_type"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/start_call_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/videocall"/>
+<!--        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:id="@+id/startCall"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="@string/voice_call"-->
+<!--            android:layout_toEndOf="@id/start_call_image"-->
+<!--            android:background="@color/LightGreen"-->
+<!--            android:layout_height="48dp"/>-->
+
+    </RelativeLayout>
+
+
+</LinearLayout>

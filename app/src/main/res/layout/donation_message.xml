@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/DarkTop"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donation_title"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="Hi! This app is Completely free, and built it to help people connect without paying expensive fees \n \n  We want to add voice calls, video calls, and buy servers to host your data without any monthly charges, we also need to add more features for better matching, but we can't do it alone. \n \n If you enjoy using this app, please consider making a small donation to support development. \n \n Every contribution, no metter the amount, helps keep the app running and improving. \n \n Remember donations is optional, this will not affect your InterDate account. \n \n Thank you for being part of this community."/>
+
+    <Button
+        android:id="@+id/visit_pay_pal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="CLICK HERE TO DONATE"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/videoCall"
+        android:title="@string/video_chat"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/videocall"/>
+    <item
+        android:title="@string/voice_chat"
+        android:icon="@drawable/call"
+        app:showAsAction="always"
+        android:id="@+id/voice_chat"/>
+    <item
+        android:title="@string/more_options_"
+        android:icon="@drawable/more_vert"
+        app:showAsAction="always"
+        android:id="@+id/more_options">
+        <menu
+            >
+            <item
+                android:id="@+id/profile_to"
+                android:title="@string/profile"
+                />
+            <item
+                android:id="@+id/block"
+                android:title="Block"
+                />
+            <item
+                android:id="@+id/deleteCon"
+                android:title="@string/delete_conversation"
+                />
+        </menu>
+
+    </item>
+
+
+</menu>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="auto"
+    android:gravity="center"
+    android:id="@+id/mainLayout"
+    android:rotationX="360"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/subMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    style="@style/Theme.InterDate.Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    app:menu="@menu/menu"
+                    app:title="@string/app_name"
+                    app:titleTextColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="?android:actionBarSize"
+                        android:layout_gravity="end"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/imageCoins"
+                            android:contentDescription="@string/coins"
+                            android:src="@drawable/fitbit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/intersCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/gothamroundedmedium"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textAllCaps="true"/>
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/camera"
+                            style="@style/Theme.InterDate.Toolbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="?android:actionBarSize"
+                            app:menu="@menu/main_camera"
+                            app:titleTextColor="@color/white" />
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardView.Light.NEW"
+                android:id="@+id/add_coins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:strokeWidth="0dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="7dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/layout_ads_progress"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:layout_width="match_parent"
+                            android:outlineProvider="paddedBounds"
+                            android:indeterminate="true"
+                            android:background="@color/PagerBack"
+                            app:trackColor="@color/PagerBack"
+                            app:trackThickness="5dp"
+                            app:trackCornerRadius="10dp"
+                            android:backgroundTint="@color/PagerBack"
+                            android:indeterminateTint="@color/LightGreen"
+                            android:progressBackgroundTint="@color/LightGreen"
+                            android:progressTint="@color/darkGreen"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="10dp"                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="@string/please_wait"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_have_less_than_5_coins_if_they_get_to_0_you_may_not_be_able_to_send_requests_and_messages_please_click_this_messageto_watch_ad_and_increase_your_coins"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/centurygothic"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/AdBanner_UnitId"/>
+            <LinearLayout
+                android:id="@+id/friends_search"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginVertical="3dp"
+                android:paddingHorizontal="5dp"
+
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/add_holder"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/add_new"
+                            android:layout_width="50dp"
+                            android:focusable="true"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="100dp"
+                            app:strokeWidth="1.5dp"
+                            android:clickable="true"
+                            android:layout_height="50dp"
+                            style="@style/Theme.InterDate.materialCard">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:contentDescription="@string/add_friends"
+                                android:padding="5dp"
+                                android:layout_gravity="center"
+                                style="@style/Base.Widget.AppCompat.ImageView."
+                                android:src="@drawable/add_chat" />
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/request_countCard"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            app:cardCornerRadius="100dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="@color/sentBackDark"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/requestCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:paddingHorizontal="5dp"
+                                android:inputType="number"
+                                android:fontFamily="@font/centurygothic"
+                                android:textStyle="normal"
+                                android:textColor="@color/white"
+                                android:text="9"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/friendsRecycler"
+                        android:layout_toStartOf="@id/switchSearch"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@id/add_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/switchSearch"
+                        android:layout_width="48dp"
+                        android:visibility="gone"
+                        style="@style/Theme.InterDate.materialCard"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="false"
+                        app:cardCornerRadius="100dp"
+                        android:focusable="true"
+                        app:cardElevation="0dp"
+                        android:layout_height="48dp">
+                        <ImageView
+                            android:id="@+id/searchCancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/close_search"
+                            android:src="@drawable/add_chat"
+                            android:padding="10dp"
+                            android:alpha="0.0"
+                            app:strokeWidth="1.5dp"
+                            style="@style/Base.Widget.AppCompat.ImageView."
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="fitCenter"/>
+                        <ImageView
+                            android:id="@+id/searchImage"
+                            android:alpha="1.0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/search_image"
+                            android:src="@drawable/search"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            style="@style/Base.Widget.AppCompat.ImageView."
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="fitCenter"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/searchEditorCard"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="10dp"
+                    android:layout_gravity="top"
+                    android:scaleY="0.0"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    style="@style/Theme.InterDate.materialCard"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/searchEditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:imeActionLabel="search"
+                        android:imeOptions="actionSearch"
+                        android:hint="@string/eg_name"
+                        android:autofillHints="username"
+                        style="@style/Base.Widget.AppCompat.EditText."/>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecycler"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
+                style="@style/PagerHome."
+                android:paddingBottom="5dp"
+                android:contentDescription="@string/navigationpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/requestsCard"
+        style="@style/Theme.InterDate.materialCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:scaleY="0"
+        android:scaleX="0"
+        android:alpha="0.0"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/requests"
+                    android:textSize="17sp"
+                    android:paddingVertical="5dp"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dismiss"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="5dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="@color/DarkTop">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:contentDescription="@string/done"
+                        android:src="@drawable/done"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        app:tint="@color/darkGreen" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tabLayout"
+                app:tabGravity="fill"
+                android:contentDescription="@string/main_layout"
+                style="@style/Theme.InterDate.TabLayout"
+                android:layout_height="wrap_content"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/requestPager"
+                style="@style/PagerHome."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FriendHome"
+        style="@style/Base.Widget.Material3.FloatingActionButton.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_above="@id/floatingHome"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/LightGreen"
+        android:contentDescription="@string/add"
+        android:src="@drawable/add_chat" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingHome"
+        style="@style/Base.Widget.Material3.FloatingActionButton."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:contentDescription="@string/add"
+        android:layout_above="@id/nav"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/person" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        app:menu="@menu/nav_menu"
+        style="@style/navigation"
+        app:itemActiveIndicatorStyle="@style/Theme.Indicator"
+        app:labelVisibilityMode="labeled"
+        app:itemRippleColor="@color/LightGreen"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+
+    
+
+</RelativeLayout>

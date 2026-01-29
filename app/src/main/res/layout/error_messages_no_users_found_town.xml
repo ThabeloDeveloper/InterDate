@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    style="@style/BottomSheetEditLinearLayout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:text="@string/sorry"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Msg"
+        android:text="@string/to_continue_using_interdate_please_update_to_the_latest_versionnn"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continuea"
+            android:id="@+id/yes"
+            android:layout_alignParentEnd="true"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:id="@+id/no"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_marginTop="13dp"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

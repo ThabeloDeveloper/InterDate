@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".HelpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        app:title="Help"
+        android:pointerIcon="arrow"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        android:id="@+id/tabLayout"
+        app:subtitleTextColor="@color/white"
+        android:navigationIcon="@drawable/arrow_back"
+        style="@style/Theme.InterDate.Toolbar"
+        android:layout_height="?android:actionBarSize"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="0dp"
+        android:layout_width="match_parent"
+        style="@style/CardView.Edit"
+        android:id="@+id/contact_us"
+        app:cardCornerRadius="0dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_height="?android:actionBarSize">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="49dp"
+                android:contentDescription="@string/contact"
+                android:src="@drawable/contact_support"
+                style="@style/Base.Widget.AppCompat.ImageView.Account."
+                android:layout_height="49dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_us"
+                    style="@style/Base.Widget.AppCompat.TextView"
+                    android:textStyle="normal"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/we_are_here_to_help"
+                    android:textStyle="normal"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        style="@style/CardView.Edit"
+        android:id="@+id/privacy"
+        app:cardCornerRadius="0dp"
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_height="?android:actionBarSize">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="48dp"
+                android:contentDescription="@string/terms_and_privacy_policy"
+                android:src="@drawable/sticky_note"
+                style="@style/Base.Widget.AppCompat.ImageView.Account."
+                android:layout_height="48dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/terms_and_privacy_policy"
+                    style="@style/Base.Widget.AppCompat.TextView"
+                    android:textStyle="normal"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/keep_track_of_privacy_policy_changes"
+                    android:textStyle="normal"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        style="@style/CardView.Edit"
+        android:id="@+id/app_info"
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_height="?android:actionBarSize">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="48dp"
+                android:contentDescription="@string/app_info_"
+                android:src="@drawable/baseline_info"
+                style="@style/Base.Widget.AppCompat.ImageView.Account."
+                android:layout_height="48dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_info"
+                    style="@style/Base.Widget.AppCompat.TextView"
+                    android:textStyle="normal"
+                    android:textSize="16sp"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

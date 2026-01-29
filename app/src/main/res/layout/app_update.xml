@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    style="@style/BottomSheetEditLinearLayout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/new_update_available"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/to_continue_using_interdate_please_update_to_the_latest_versionn"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/update_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_now"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/maybe_later"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/maybe_later"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maybe_later"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="13dp"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

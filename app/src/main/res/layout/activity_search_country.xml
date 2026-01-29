@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_Country">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:layout_alignWithParentIfMissing="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            style="@style/CardView.Light.UserDetails"
+            android:layout_height="48dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:contentDescription="@string/global_search"
+                    app:tint="@color/darkGreen"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/globe"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="@string/search_place"
+                        android:id="@+id/query"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:autofillHints="postalAddress"
+                        style="@style/Base.Widget.AppCompat.EditText."
+                        android:layout_marginStart="5dp"
+                        android:layout_toStartOf="@+id/search"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        app:tint="@color/darkGreen"
+                        android:textSize="16sp"
+                        style="@style/TextAppearance.AppCompat."
+                        android:id="@+id/search"
+                        android:text="@string/search"
+
+                        android:layout_marginEnd="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/globe"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/checkScroll"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/location"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:id="@+id/checklocation"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/country"
+                    android:id="@+id/checkboxcountry"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/state"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/checkboxstate"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/city"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/checkboxcity"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/town"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/checkboxtown"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:text="@string/university_college"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/checkunivcol"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="5dp"
+            style="@style/CardView.Light.UserDetails"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:id="@+id/ProgressCard"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:layout_width="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:indeterminateTint="@color/LightGreen"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/please_wait"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        android:visibility="visible"
+        ads:adUnitId="@string/AdBanner_UnitId">
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/noDataInLocation"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_height="100dp"
+            android:id="@+id/errorImage"
+            android:contentDescription="@string/nothing_found_in_this_location"
+            app:tint="@color/LightGreen"
+            android:src="@drawable/location_off"
+            android:layout_width="100dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/errorMsg"
+            android:text="@string/no_users_found_at_of_your_prefference"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

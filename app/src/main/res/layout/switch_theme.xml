@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/BottomSheetEditLinearLayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="20dp"
+        style="@style/BottomSheetEditLinearLayout"
+        android:fontFamily="@font/gothamroundedmedium"
+        android:text="@string/swith_theme"
+        android:id="@+id/specify"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:textStyle="normal"
+        style="@style/BottomSheetEditLinearLayout"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_app_theme"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/darkModeLayout"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/darkCard"
+                layout="@layout/themelayoutdark"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/darkSwitch"
+                android:checked="false"
+                app:thumbTint="@color/switch_thumb_color"
+                app:thumbTintMode="multiply"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/darkCard"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="2dp"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="@color/darkGreen"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="100dp"/>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/lightModeLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/lightCard"
+                layout="@layout/themelayoutlight"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:thumbTint="@color/switch_thumb_color"
+                android:id="@+id/lightSwitch"
+                android:checked="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/lightCard"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:dividerColor="@color/LightGreen"
+        android:layout_marginTop="5dp"/>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:id="@+id/autoSwitch"
+        app:thumbTint="@color/switch_thumb_color"
+        android:textStyle="bold"
+        android:checked="false"
+        android:text="@string/auto_detect_system_theme"
+        android:layout_marginHorizontal="10dp"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

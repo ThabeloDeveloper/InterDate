@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    style="@style/Theme.AppCompat.Light."
+    android:layout_height="match_parent"
+    tools:context=".Messages">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        app:title=""
+        android:pointerIcon="arrow"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        app:menu="@menu/on_chat_menu"
+        android:id="@+id/tabLayout"
+        app:subtitleTextColor="@color/white"
+        android:navigationIcon="@drawable/arrow_back"
+        style="@style/Theme.InterDate.Toolbar"
+        android:layout_height="?android:actionBarSize"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tabLayout"
+        app:cardCornerRadius="10dp"
+        style="@style/CardView.Light.UserDetails"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:id="@+id/ProgressCard"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_marginEnd="5dp"
+                android:indeterminateTint="@color/LightGreen"
+                android:layout_gravity="center_vertical"
+                android:layout_height="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:text="@string/loading_"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tabLayout"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/defirstTextCard"
+        style="@style/CardView.Light.UserDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:padding="7dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/defirstText"
+                android:textSize="16sp"
+                android:text="@string/be_the_first_to_send_message_to"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_above="@id/ButtonCard"
+        android:paddingBottom="5dp"
+        android:id="@+id/RecyclerViews"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"/>
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="50dp"
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        android:layout_marginStart="5dp"
+        style="@style/CardView.Type"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/ButtonCard"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="30dp"
+                android:id="@+id/sendingProgress"
+                android:visibility="gone"
+                style="@style/Base.Widget.AppCompat.ImageView"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="@string/message_"
+                android:textSize="18sp"
+                android:inputType="text"
+                android:layout_toEndOf="@+id/sendingProgress"
+                style="@style/Base.Widget.AppCompat.EditText."
+                android:gravity="center_vertical"
+                android:id="@+id/Msg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/LeftPoint"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <TextView
+                android:id="@+id/LeftPoint"
+                android:text="@string/_0"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="60dp"
+        android:id="@+id/ButtonCard"
+        android:focusable="true"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="50dp"
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        android:clickable="true"
+        style="@style/CardView.Type"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:contentDescription="@string/send"
+            android:src="@drawable/send"
+            android:padding="0dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            style="@style/Theme.InterDate.TabLayout"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>

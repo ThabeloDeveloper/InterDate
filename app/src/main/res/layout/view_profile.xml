@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".ViewImage">
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:id="@+id/imageMain"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:id="@+id/username"
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="Username"
+        app:titleTextColor="@color/white"
+        android:background="@android:color/transparent"
+        android:layout_height="?android:actionBarSize">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+
+</RelativeLayout>

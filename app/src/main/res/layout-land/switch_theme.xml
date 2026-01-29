@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/BottomSheetEditLinearLayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="20dp"
+        style="@style/BottomSheetEditLinearLayout"
+        android:fontFamily="@font/gothamroundedmedium"
+        android:text="@string/swith_theme"
+        android:id="@+id/specify"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:textStyle="normal"
+        style="@style/BottomSheetEditLinearLayout"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_app_theme"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/darkModeLayout"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/darkCard"
+                layout="@layout/themelayoutdark"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/darkSwitch"
+                app:thumbTint="@color/switch_thumb_color"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/darkCard"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="2dp"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="@color/darkGreen"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:layout_height="100dp"/>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/lightModeLayout"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/lightCard"
+                layout="@layout/themelayoutlight"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lightSwitch"
+                android:checked="false"
+                app:thumbTint="@color/switch_thumb_color"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/lightCard"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="2dp"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="@color/darkGreen"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:layout_height="100dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/autoLayout"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/autoLight"
+                layout="@layout/themelayoutlight"/>
+            <include
+                android:layout_marginStart="50dp"
+                layout="@layout/themelayoutdark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:id="@+id/autoSwitch"
+                android:layout_below="@id/autoLight"
+                android:checked="false"
+                app:thumbTint="@color/switch_thumb_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="10dp"
+                />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

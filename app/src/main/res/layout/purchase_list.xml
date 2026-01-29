@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    style="@style/BottomSheetEditLinearLayout"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_margin="5dp"
+        style="@style/CardView.Type"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"/>
+    
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/product_list"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/SemiminorPriceText"
+                android:id="@+id/Semiminor_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semi_minor_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_lowest_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$8.99/250"
+                android:layout_toStartOf="@id/SemiminorBuy"
+                android:id="@+id/SemiminorPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/SemiminorBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/minorPriceText"
+                android:id="@+id/minor_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minor_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_lowest_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$16.99/500"
+                android:layout_toStartOf="@id/minorBuy"
+                android:id="@+id/minorPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/minorBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/SemimediumPriceText"
+                android:id="@+id/semiMedium_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semi_medium_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_medium_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$21.99/750"
+                android:layout_toStartOf="@id/SemimediumBuy"
+                android:id="@+id/SemimediumPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/SemimediumBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/mediumPriceText"
+                android:id="@+id/Medium_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medium_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_medium_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$35.99/1000"
+                android:layout_toStartOf="@id/mediumBuy"
+                android:id="@+id/mediumPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/mediumBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/UltraPriceText"
+                android:id="@+id/Ultra_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ultra_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_ultra_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$65.99/2000"
+                android:layout_toStartOf="@id/UltramediumBuy"
+                android:id="@+id/UltraPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/UltramediumBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/purchase_image"
+            android:layout_marginEnd="3dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/UltraextraPriceText"
+                android:id="@+id/Ultra_extra_layout"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ultra_extra_credits"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:text="@string/interact_with_app_with_our_ultra_cost_credits"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="$110.99/4000"
+                android:layout_toStartOf="@id/UltraextraBuy"
+                android:id="@+id/UltraextraPriceText"
+                android:textColor="@color/darkGreen"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:id="@+id/UltraextraBuy"
+                android:text="Buy"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    
+    
+</LinearLayout>

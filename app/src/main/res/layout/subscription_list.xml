@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/sub_back_gradient"
+    android:layout_width="match_parent"
+    android:paddingBottom="15dp"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_margin="5dp"
+        style="@style/CardView.Type"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/go_premium"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal"
+        android:animateLayoutChanges="true"
+        android:columnCount="4"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal"
+            android:layout_column="0"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:elevation="10dp"
+                android:src="@drawable/videocall"
+                android:background="@drawable/images_background"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video Chat"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:elevation="10dp"
+                android:src="@drawable/videocall"
+                android:background="@drawable/images_background"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Ads"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_column="0"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:elevation="10dp"
+                android:src="@drawable/videocall"
+                android:background="@drawable/images_background"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voice Chat"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:elevation="10dp"
+                android:src="@drawable/videocall"
+                android:background="@drawable/images_background"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messaging"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
+
+
+
+        </LinearLayout>
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:scrollbars="none"
+            android:layout_marginBottom="10dp"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+                <LinearLayout
+                    android:id="@+id/annual"
+                    android:layout_height="100dp"
+                    android:layout_weight="5"
+                    android:elevation="10dp"
+                    style="@style/LayoutSubBack"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Annual Subscription"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/gothamroundedmedium"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Was $500.99/year Subscription"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Now $349.99/year Subscription"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/monthly"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:elevation="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="50"
+                    style="@style/LayoutSubBack"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Monthly Subscription"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/gothamroundedmedium"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Was $3.99/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Now $2/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/weekly"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:elevation="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="5"
+                    style="@style/LayoutSubBack"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Weekly Subscription"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/gothamroundedmedium"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Was $3.99/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Now $2/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/daily"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="5"
+                    style="@style/LayoutSubBack"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Subscription"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/gothamroundedmedium"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Was $3.99/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Now $2/day Subscription"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="Please note that Interdate does not offer any free trial of any subscriptions."/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="If any subscription is detected, your account will automatically recieve Credits. Your credits will not fall lower than 10 Credits."/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Subscription is not required for the app's overall functionality.You can use the app with the basic functionality without above features."/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="This subscription will automatically renew untill you cancel."/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="By subscribing to our services you agree that you have read and understood our Terms &amp; Conditions, and Privacy Policay"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/privacy_policy"
+                        android:textStyle="bold"
+                        android:textSize="11sp"/>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="|"
+                        android:textStyle="bold"
+                        android:layout_marginHorizontal="5dp"
+                        android:textSize="11sp"/>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/terms_of_service"
+                        android:textStyle="bold"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
